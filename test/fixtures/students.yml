@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  IDno: 1
+  department: MyString
+  maths: 1
+  physics: 1
+  chemistry: 1
+  year: 1
+
+two:
+  IDno: 1
+  department: MyString
+  maths: 1
+  physics: 1
+  chemistry: 1
+  year: 1

@@ -1,0 +1,13 @@
+<div>
+  <%= form_for :colleges,url: { action: "update",controller: "colleges"}, method:"put" do |f|%>
+
+        <%= f.label :college_name %>
+        <%= f.text_field :college_name %><br />
+
+        <%= f.label :esta_year %>
+        <%= f.text_field :esta_year %><br />
+
+        <%= f.submit %>
+
+    <% end %>
+</div>

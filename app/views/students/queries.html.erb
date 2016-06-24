@@ -1,0 +1,105 @@
+
+
+<p>
+<%= @mean_hash %>
+</p>
+
+<p>
+
+<%= @sorted %>
+</p>
+
+<p>
+<%= @sorted %>
+</p>
+
+<style>
+table {
+    border-collapse: collapse;
+}
+
+table, tr,td, th {
+    border: 1px solid black;
+}
+</style>
+
+
+
+<h1> GROUPBY <%=@grpby_id_dept_year%> </h1>
+
+<div>
+	
+	<table style = "width:20%">
+		<tr>
+			<th><%= @grpby_id_dept_year %></th>
+			<% @mean_hash[@mean_hash.keys[0]].keys.each do |k| %>
+			<th><%= k %> </th> 
+			<% end %>
+		</tr>
+		<% @mean_hash.keys.each do |h| %>
+		<tr>
+			<td><%= h %></td>
+			<% @mean_hash[h].keys.each do |k| %>
+			<td><%= @mean_hash[h][k].round(2) %> </td> 
+			<% end %>
+		</tr>
+		<% end %>
+	</table>
+</div>
+<%= @sorted[0].keys%>
+<% @sorted.each do |h| %>
+<%= h %>
+<% end %>
+
+<h1> SORTBY </h1>
+
+<div>
+	<table style = "width:20%">
+		<tr>
+			<% @sorted[0].keys.each do |k| %>
+				<th><%= k %> </th> 
+			<% end %>
+		</tr>
+		<% for h in 0..(@sorted.length-1) %>
+			<tr>
+				<% @sorted[h].keys.each do |k| %>
+					<td><%= @sorted[h][k] %> </td> 
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+
+
+
+<p><%= @grp_newarr%></p>
+<p><%= @meanhash_to_arr_of_hashes%></p>
+
+<h1> SHOW TOTAL </h1>
+
+<div>
+	<table style = "width:20%">
+		<tr>
+			<% @sumhash_to_arr_of_hashes[0].keys.each do |k| %>
+				<th><%= k %> </th> 
+			<% end %>
+		</tr>
+		<% for h in 0..(@sumhash_to_arr_of_hashes.length-1) %>
+			<tr>
+				<% @sumhash_to_arr_of_hashes[h].keys.each do |k| %>
+					<td><%= @sumhash_to_arr_of_hashes[h][k] %> </td> 
+				<% end %>
+			</tr>
+		<% end %>
+	</table>
+</div>
+
+
+<p> <%= @output_compared%> </p>
+
+
+
+
+
+

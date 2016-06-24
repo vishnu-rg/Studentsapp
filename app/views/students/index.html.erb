@@ -1,0 +1,48 @@
+<div>
+	<style>
+    	table, tr, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+	    }
+	</style>
+		<table style="width:70%" border = "0">
+		  <tr>
+		  	<td>id</td>
+		  	<td>college_id</td>
+		  	<td>extendedId</td>
+		    <td>IDno</td>
+		    <td>department</td>
+		    <td>maths</td>
+		    <td>physics</td>
+		    <td>chemistry</td>
+		    <td>year</td>
+		    <td>actions</td>
+		  </tr>
+		 <% @students.each do |students| %>
+			<tr>
+				<td><%= students.id %> </td> 
+				<td><%= students.college_id %> </td> 
+				<td><%= students.extendedId %> </td>
+				<td><%= students.IDno %> </td> 
+				<td><%= students.department %></td>
+			    <td><%= students.maths %></td>
+			    <td><%= students.physics %></td>
+			    <td><%= students.chemistry %></td>
+			    <td><%= students.year %></td>
+			    <td><%= link_to "show" ,student_path(students),method: "get" %>/<%= link_to "edit" ,edit_student_path(students), method: :get %>/<%= link_to "delete" ,student_path(students), method: :delete,
+				:confirm => 'Are you sure?' %></td>
+			</tr>
+			<% end %>
+		</table>
+	<p><%= link_to "new" , action: "new" %></p>
+	<p><%= link_to "DoQueries", action: "doquery" %></p>
+</div>
+
+
+
+
+
+
+
+
+

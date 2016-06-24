@@ -1,0 +1,29 @@
+<div>
+  <%= form_for :students,url: { action: "update",controller: "students"}, method:"put" do |f|%>
+
+        <%= f.label :IDno %>
+        <%= f.text_field :IDno %><br />
+
+        <%= f.label :college_id %>
+        <%= f.text_field :college_id %><br />
+
+        <%= f.label :department %>
+        <%= f.text_field :department %><br />
+
+        <%= f.label :maths %>
+        <%= f.text_field :maths %><br />
+
+        <%= f.label :physics %>
+        <%= f.text_field :physics %><br />
+
+        <%= f.label :chemistry %>
+        <%= f.text_field :chemistry %><br />
+
+        <%= f.label :year%>
+        <%= f.text_field :year %><br />
+
+        <%= f.submit %>
+    <%end %>
+</div>
+
+

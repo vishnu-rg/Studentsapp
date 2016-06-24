@@ -1,0 +1,50 @@
+
+<div>
+	<%= form_for :students,url: {action: "queries", controller: "students"},method: "get"  do |f| %> 
+	<p>
+
+	  Groupby:
+		
+		<select name = "groupby">
+			<option value ="IDno"> IDno</option>
+			<option value = "department" >department</option>
+			<option value = "year" >year</option>
+			<option value = "none" >none</option>
+		</select>
+
+	</p>
+
+	<p>
+	  Sortby:
+		<select name = "sortby">
+			<option value ="maths"> maths</option>
+			<option value = "physics" >physics</option>
+			<option value = "chemistry" >chemistry</option>
+			<option value = "none" >none</option>
+		</select>
+	</p>
+
+	<p>
+	    Display by maths/physics/chemitry:<%= check_box_tag "active", 1, true%>
+	</p>
+
+
+	<p>
+		Do you want comparison:
+		<select name = "compareby">
+			<option value ="IDno"> IDno</option>
+			<option value = "department" >department</option>
+			<option value = "none" >none</option>
+		</select>
+	</p>
+
+	<p>
+	 	show total:<%= check_box_tag "active2", 1, true %>
+	</p>
+
+	<p>
+
+	</p>
+		<input type="submit" value="Submit">
+	<% end %>
+</div>

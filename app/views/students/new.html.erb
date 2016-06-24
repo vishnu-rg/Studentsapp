@@ -1,0 +1,133 @@
+<div>
+	<%= form_for :students, url: {action: "create", controller: "students"},  method: "post" do |f|%>
+
+			<%= f.label :IDno %>
+			<%= f.text_field :IDno %><br />
+
+			<%= f.label :college_id %>
+			<%= f.text_field :college_id %><br />
+
+      <%= f.label :department %>
+			<%= f.text_field :department %><br />
+
+			<%= f.label :maths %>
+			<%= f.text_field :maths %><br />
+
+			<%= f.label :physics %>
+			<%= f.text_field :physics %><br />
+
+			<%= f.label :chemistry %>
+			<%= f.text_field :chemistry %><br />
+
+			<%= f.label :year%>
+			<%= f.text_field :year %><br />
+
+			<%= f.submit %>
+
+		<% end %>
+</div>
+
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+  <script type="text/javascript">
+    function loadStudent() {  
+      $.ajax({
+         url: 'http://localhost:3000/students/' + $(".id").val(),
+         data: {},
+         type: 'GET',
+         error: function() {
+            debugger
+            alert("Error!");
+            $('#info').html('<p>An error has occurred</p>');
+         },
+         success: function(data) {
+          alert("content loaded successfully!");
+          var student = data;
+            var table = $("<table></table>");
+
+            var tr1 = $("<tr></tr>");
+            var td1 = $("<td></td>");
+            td1.text("id");
+            tr1.append(td1);
+            var td2 = $("<td></td>");
+            td2.text("college_id");
+            
+            tr1.append(td2);
+            var td3 = $("<td></td>");
+            td3.text("department");
+            
+            tr1.append(td3);
+            var td4 = $("<td></td>");
+            td4.text("maths");
+            
+            tr1.append(td4);
+            var td5 = $("<td></td>");
+            td5.text("physics");
+            
+            tr1.append(td5);
+            var td6 = $("<td></td>");
+            td6.text("chemistry");
+            
+            tr1.append(td6);
+            var td7 = $("<td></td>");
+            td7.text("year");
+            
+            tr1.append(td7);
+
+            var tr2 = $("<tr></tr>");
+            var td1 = $("<td></td>");
+            td1.text(data["id"]);
+            tr2.append(td1);
+            var td2 = $("<td></td>");
+            td2.text(data["college_id"]);
+            
+            tr2.append(td2);
+            var td3 = $("<td></td>");
+            td3.text(data["department"]);
+            
+            tr2.append(td3);
+            var td4 = $("<td></td>");
+            td4.text(data["maths"]);
+            
+            tr2.append(td4);
+            var td5 = $("<td></td>");
+            td5.text(data["physics"]);
+            
+            tr2.append(td5);
+            var td6 = $("<td></td>");
+            td6.text(data["chemistry"]);
+            
+            tr2.append(td6);
+            var td7 = $("<td></td>");
+            td7.text(data["year"]);
+            
+            tr2.append(td7);
+            table.append(tr1);
+            table.append(tr2);
+
+            $(".student-json").html(table);      
+         }
+      });
+
+    }
+  </script>
+</head>
+
+
+<p>
+  <input type="text" class="id"/>
+  <a href="#" onclick = "loadStudent()">load student</a>
+  <div class="student-json">
+  </div>
+</p>
+</html>

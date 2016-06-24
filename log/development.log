@@ -1,0 +1,295 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-06-23 17:56:55 +0530
+
+ActionController::RoutingError (No route matches [GET] "/customers"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Processing by CollegesController#index as HTML
+  [1m[36mCollege Load (0.1ms)[0m  [1mSELECT "colleges".* FROM "colleges" [0m
+In sssssssssssssssssss: {"action"=>"index", "controller"=>"colleges"}
+  Rendered colleges/index.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 251ms (Views: 237.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/colleges.css?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /colleges.css - 200 OK (1ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /students.css - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /students.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/colleges.js?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /colleges.js - 200 OK (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 17:56:57 +0530
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/colleges/listing.4" for 127.0.0.1 at 2016-06-23 17:57:04 +0530
+Processing by CollegesController#listing as 
+  Parameters: {"authenticity_token"=>"fLJRX+auL61lB3eCkNSCkVa2nlMECVyXDHXg/hKcHbE="}
+  [1m[35mCollege Load (0.4ms)[0m  SELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT 1  [["id", "4"]]
+Updatinpppppppppppppppppppgggggggggggggg Record #<College id: 4, college_name: "BITS hyderabad", esta_year: 1980, created_at: "2016-06-16 04:58:21", updated_at: "2016-06-21 09:03:04">
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."college_id" = 4[0m
+Updatinggggggggggggggggggggggggg Record [#<Student id: 5, IDno: 2, department: "a1", maths: 66, physics: 52, chemistry: 65, year: 2016, created_at: "2016-06-15 08:24:17", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "2_BI_4">, #<Student id: 7, IDno: 1, department: "a1", maths: 21, physics: 52, chemistry: 65, year: 2015, created_at: "2016-06-15 08:25:52", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "1_BI_4">, #<Student id: 9, IDno: 3, department: "a7", maths: 85, physics: 22, chemistry: 43, year: 2015, created_at: "2016-06-15 08:27:05", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "3_BI_4">, #<Student id: 14, IDno: 2, department: "a1", maths: 43, physics: 52, chemistry: 16, year: 2015, created_at: "2016-06-20 06:20:59", updated_at: "2016-06-21 09:03:52", college_id: 4, extendedId: "2_BI_4">]
+  Rendered colleges/listing.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 123ms (Views: 11.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 17:57:04 +0530
+Served asset /application.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 17:57:04 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 17:57:04 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 17:57:04 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+Connecting to database specified by database.yml
+
+
+Started GET "/customers" for 127.0.0.1 at 2016-06-23 18:15:45 +0530
+
+ActionController::RoutingError (No route matches [GET] "/customers"):
+  actionpack (3.2.13) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.13) lib/rails/rack/logger.rb:32:in `call_app'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `block in call'
+  activesupport (3.2.13) lib/active_support/tagged_logging.rb:22:in `tagged'
+  railties (3.2.13) lib/rails/rack/logger.rb:16:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.7) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.7) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.13) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.7) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.13) lib/action_dispatch/middleware/static.rb:63:in `call'
+  railties (3.2.13) lib/rails/engine.rb:479:in `call'
+  railties (3.2.13) lib/rails/application.rb:223:in `call'
+  rack (1.4.7) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.13) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.7) lib/rack/handler/webrick.rb:59:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/local/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/local/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /usr/local/lib/ruby/gems/2.1.0/gems/actionpack-3.2.13/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/colleges" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Processing by CollegesController#index as HTML
+  [1m[36mCollege Load (0.1ms)[0m  [1mSELECT "colleges".* FROM "colleges" [0m
+In sssssssssssssssssss: {"action"=>"index", "controller"=>"colleges"}
+  Rendered colleges/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 35ms (Views: 21.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /students.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /jquery.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/colleges.css?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /colleges.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/colleges.js?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /colleges.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /application.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2016-06-23 18:15:48 +0530
+Served asset /students.js - 304 Not Modified (1ms)
+
+
+Started GET "/colleges/listing.4" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Processing by CollegesController#listing as 
+  Parameters: {"authenticity_token"=>"fLJRX+auL61lB3eCkNSCkVa2nlMECVyXDHXg/hKcHbE="}
+  [1m[35mCollege Load (0.2ms)[0m  SELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT 1  [["id", "4"]]
+Updatinpppppppppppppppppppgggggggggggggg Record #<College id: 4, college_name: "BITS hyderabad", esta_year: 1980, created_at: "2016-06-16 04:58:21", updated_at: "2016-06-21 09:03:04">
+  [1m[36mStudent Load (0.1ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."college_id" = 4[0m
+Updatinggggggggggggggggggggggggg Record [#<Student id: 5, IDno: 2, department: "a1", maths: 66, physics: 52, chemistry: 65, year: 2016, created_at: "2016-06-15 08:24:17", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "2_BI_4">, #<Student id: 7, IDno: 1, department: "a1", maths: 21, physics: 52, chemistry: 65, year: 2015, created_at: "2016-06-15 08:25:52", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "1_BI_4">, #<Student id: 9, IDno: 3, department: "a7", maths: 85, physics: 22, chemistry: 43, year: 2015, created_at: "2016-06-15 08:27:05", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "3_BI_4">, #<Student id: 14, IDno: 2, department: "a1", maths: 43, physics: 52, chemistry: 16, year: 2015, created_at: "2016-06-20 06:20:59", updated_at: "2016-06-21 09:03:52", college_id: 4, extendedId: "2_BI_4">]
+  Rendered colleges/listing.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 47ms (Views: 10.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/colleges.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /colleges.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/colleges.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /colleges.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:12 +0530
+Served asset /application.js - 304 Not Modified (2ms)
+
+
+Started GET "/colleges/listing.4" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Processing by CollegesController#listing as 
+  Parameters: {"authenticity_token"=>"fLJRX+auL61lB3eCkNSCkVa2nlMECVyXDHXg/hKcHbE="}
+  [1m[35mCollege Load (0.1ms)[0m  SELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT 1  [["id", "4"]]
+Updatinpppppppppppppppppppgggggggggggggg Record #<College id: 4, college_name: "BITS hyderabad", esta_year: 1980, created_at: "2016-06-16 04:58:21", updated_at: "2016-06-21 09:03:04">
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."college_id" = 4[0m
+Updatinggggggggggggggggggggggggg Record [#<Student id: 5, IDno: 2, department: "a1", maths: 66, physics: 52, chemistry: 65, year: 2016, created_at: "2016-06-15 08:24:17", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "2_BI_4">, #<Student id: 7, IDno: 1, department: "a1", maths: 21, physics: 52, chemistry: 65, year: 2015, created_at: "2016-06-15 08:25:52", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "1_BI_4">, #<Student id: 9, IDno: 3, department: "a7", maths: 85, physics: 22, chemistry: 43, year: 2015, created_at: "2016-06-15 08:27:05", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "3_BI_4">, #<Student id: 14, IDno: 2, department: "a1", maths: 43, physics: 52, chemistry: 16, year: 2015, created_at: "2016-06-20 06:20:59", updated_at: "2016-06-21 09:03:52", college_id: 4, extendedId: "2_BI_4">]
+  Rendered colleges/listing.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 14ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /jquery.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/colleges.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /colleges.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/colleges.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /colleges.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 18:16:31 +0530
+Served asset /application.js - 304 Not Modified (1ms)
+
+
+Started GET "/colleges/listing.4" for 127.0.0.1 at 2016-06-23 18:17:18 +0530
+Processing by CollegesController#listing as 
+  Parameters: {"authenticity_token"=>"fLJRX+auL61lB3eCkNSCkVa2nlMECVyXDHXg/hKcHbE="}
+  [1m[35mCollege Load (0.1ms)[0m  SELECT "colleges".* FROM "colleges" WHERE "colleges"."id" = ? LIMIT 1  [["id", "4"]]
+Updatinpppppppppppppppppppgggggggggggggg Record #<College id: 4, college_name: "BITS hyderabad", esta_year: 1980, created_at: "2016-06-16 04:58:21", updated_at: "2016-06-21 09:03:04">
+  [1m[36mStudent Load (0.2ms)[0m  [1mSELECT "students".* FROM "students" WHERE "students"."college_id" = 4[0m
+Updatinggggggggggggggggggggggggg Record [#<Student id: 5, IDno: 2, department: "a1", maths: 66, physics: 52, chemistry: 65, year: 2016, created_at: "2016-06-15 08:24:17", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "2_BI_4">, #<Student id: 7, IDno: 1, department: "a1", maths: 21, physics: 52, chemistry: 65, year: 2015, created_at: "2016-06-15 08:25:52", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "1_BI_4">, #<Student id: 9, IDno: 3, department: "a7", maths: 85, physics: 22, chemistry: 43, year: 2015, created_at: "2016-06-15 08:27:05", updated_at: "2016-06-21 09:03:51", college_id: 4, extendedId: "3_BI_4">, #<Student id: 14, IDno: 2, department: "a1", maths: 43, physics: 52, chemistry: 16, year: 2015, created_at: "2016-06-20 06:20:59", updated_at: "2016-06-21 09:03:52", college_id: 4, extendedId: "2_BI_4">]
+  Rendered colleges/listing.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /application.css - 304 Not Modified (9ms)
+
+
+Started GET "/assets/students.css?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /students.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/colleges.js?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /colleges.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/colleges.css?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /colleges.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/students.js?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /students.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2016-06-23 18:17:19 +0530
+Served asset /application.js - 304 Not Modified (1ms)
